@@ -1,0 +1,28 @@
+<mvc:View
+		xmlns:mvc="sap.ui.core.mvc"
+		xmlns:forms="sap.ui.layout.form"
+		xmlns:core="sap.ui.core"
+		xmlns="sap.m">
+
+	<forms:SimpleForm layout="ColumnLayout" width="100%">
+
+		<core:Title text="Master's Degree"/>
+
+		<Label text="Post GraduationDegree"/>
+		<Text text="MCA"/>
+
+		<Label text="CGPA"/>
+		<Text text="8.81"/>
+
+        <Label text="University"/>
+		<Text text="SRM University"/>
+
+		<Label text="College"/>
+		<Text text="SRM Institute Of Science And Technology"/>
+
+        <Label text="Passedout year"/>
+		<Text text="2024"/>
+
+	</forms:SimpleForm>
+
+</mvc:View>

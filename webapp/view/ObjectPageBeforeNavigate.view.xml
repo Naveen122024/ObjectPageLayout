@@ -1,0 +1,126 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+		   xmlns="sap.uxap"
+		   xmlns:layout="sap.ui.layout"
+		   xmlns:m="sap.m"
+		   xmlns:personal="sap.uxap.sample.SharedBlocks.personal"
+		   xmlns:employment="sap.uxap.sample.SharedBlocks.employment"
+		   xmlns:bioData="sap.uxap.sample.SharedBlocks.bioData"
+		   controllerName="sap.uxap.sample.ObjectPageBeforeNavigate.controller.ObjectPageBeforeNavigate"
+		   height="100%">
+	<ObjectPageLayout id="ObjectPageLayout"
+		enableLazyLoading="true"
+		beforeNavigate="onBeforeNavigate"
+		useIconTabBar="true"
+		showTitleInHeaderContent="true"
+		upperCaseAnchorBar="false"
+		sectionChange="onSectionChange">
+		<headerTitle>
+			<ObjectPageDynamicHeaderTitle>
+				<expandedHeading>
+					<m:Title text="Naveen Purushothaman" wrapping="true"/>
+				</expandedHeading>
+
+				<snappedHeading>
+					<m:FlexBox fitContainer="true" alignItems="Center">
+						<m:Title text="Naveen Purushothaman" wrapping="true" />
+					</m:FlexBox>
+				</snappedHeading>
+
+				<expandedContent>
+					<m:Text text="Welcome to my Portfolio"/>
+				</expandedContent>
+
+				<snappedContent>
+					<m:Text text="Welcome to my Portfolio"/>
+				</snappedContent>
+			</ObjectPageDynamicHeaderTitle>
+		</headerTitle>
+
+		<headerContent>
+			<m:FlexBox wrap="Wrap" fitContainer="true" >
+
+				<layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
+					<m:Link text="+91 94512 54158"/>
+					<m:Link text="naveen@gmail.com"/>
+				</layout:VerticalLayout>
+
+
+				<layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
+					<m:Label text="Hello! I am Naveen and I use UxAP"/>
+					<m:VBox>
+						<m:Label text="Achieved goals"/>
+						<m:ProgressIndicator percentValue="80" displayValue="80%"/>
+					</m:VBox>
+				</layout:VerticalLayout>
+
+			</m:FlexBox>
+		</headerContent>
+
+		<sections>
+
+			<ObjectPageSection titleUppercase="false" id="personal" title="Personal">
+				<subSections>
+					<ObjectPageSubSection id="personalSS1" title="Contact" titleUppercase="false">
+						<blocks>
+							<personal:BlockPhoneNumber id="phone"/>
+							<personal:BlockSocial id="social"/>
+							<personal:BlockAdresses id="adresses"/>
+							<personal:BlockMailing id="mailing" columnLayout="1"/>
+						</blocks>
+					</ObjectPageSubSection>
+
+					<ObjectPageSubSection id="personalSS2" title="Payment information" titleUppercase="false">
+						<blocks>
+							<personal:PersonalBlockPart1 id="part1" columnLayout="1"/>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+
+			<ObjectPageSection titleUppercase="false" id="employment" title="Employment">
+				<subSections>
+					<ObjectPageSubSection id="employmentSS1" title="Job information" titleUppercase="false">
+						<blocks>
+							<employment:BlockJobInfoPart1 id="jobinfopart1"/>
+							<employment:BlockJobInfoPart2 id="jobinfopart2"/>
+							<employment:BlockJobInfoPart3 id="jobinfopart3"/>
+						</blocks>
+					</ObjectPageSubSection>
+
+					<ObjectPageSubSection id="employmentSS2" title="Employee Details" titleUppercase="false">
+						<!-- <blocks>
+							<employment:BlockEmpDetailPart1 id="empdetailpart1" columnLayout="1"/>
+						</blocks> -->
+						<blocks>
+							<employment:BlockEmpDetailPart2 id="empdetailpart2" columnLayout="1"/>
+						</blocks>
+						<moreBlocks>
+							<employment:BlockEmpDetailPart3 id="empdetailpart3" columnLayout="1"/>
+						</moreBlocks>
+						
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+
+			<ObjectPageSection titleUppercase="false" id="bioData" title="BioData">
+				<subSections>
+					<ObjectPageSubSection id="bioDataSS1" title="Details" titleUppercase="false">
+						<blocks>
+							<bioData:Blockname id="name" columnLayout="1"/>
+						</blocks>
+					</ObjectPageSubSection>
+
+					<ObjectPageSubSection id="bioDataSS2" title="Education" titleUppercase="false">
+						<blocks>
+							<bioData:BlockBachelorBsc id="bachelorbsc" columnLayout="1"/>
+						</blocks>
+						<moreBlocks>
+							<bioData:BlockMasterMca id="mastermca" columnLayout="1"/>
+						</moreBlocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+
+		</sections>
+	</ObjectPageLayout>
+</mvc:View>
