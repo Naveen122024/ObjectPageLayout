@@ -46,7 +46,7 @@
 
 
 				<layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
-					<m:Label text="Hello! I am Naveen and I use UxAP"/>
+					<m:Label text="Hello! I am Sesha and I use UxAP"/>
 					<m:VBox>
 						<m:Label text="Achieved goals"/>
 						<m:ProgressIndicator percentValue="80" displayValue="80%"/>
