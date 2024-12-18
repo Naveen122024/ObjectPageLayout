@@ -17,7 +17,7 @@
 		<headerTitle>
 			<ObjectPageDynamicHeaderTitle>
 				<expandedHeading>
-					<m:Title text="Naveen Purushothaman" wrapping="true"/>
+					<m:Title text="Naveen Purushothaman" wrapping="false"/>
 				</expandedHeading>
 
 				<snappedHeading>
